@@ -1,0 +1,132 @@
+.container {
+  height: 100vh;
+  background:linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8)), url("assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerContainer {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.innerContainer h1 {
+  margin: 0;
+  color: #219f94;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.formGroup {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 400px;
+  z-index: 2;
+}
+
+.formField {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  z-index: 2;
+}
+
+.formField::placeholder {
+  color: transparent;
+}
+
+.formField:focus {
+  padding-bottom: 6px;
+  border-width: 3px;
+  border-image: linear-gradient( #219f94, #c1deae);
+  border-image-slice: 1;
+  font-size: 1rem;
+}
+
+.formField:placeholder-shown ~ .formLabel {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 15px;
+}
+
+.formField:focus ~ .formLabel{
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+}
+
+.formLabel {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+  z-index: -1;
+}
+
+.formMenu {
+  background: white;
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: black;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.formMenu:hover {
+  color: #11998e;
+}
+
+.userContainer {
+  margin-top: 40px;
+  background: white;
+  width: 550px;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.userAvatar {
+  width: 250px;
+  margin: auto;
+}
+
+.userAvatar img {
+  width: 100%;
+}
+
+.userInfo {
+  padding: 0 10px;
+}
+
+.userInfo a {
+  text-decoration: none;
+  color: #11998e;
+}
+
+.userInfo h2 {
+  color: #219f94;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.userInfo a:hover, .userInfo a:visited {
+  color: #11998e;
+}
